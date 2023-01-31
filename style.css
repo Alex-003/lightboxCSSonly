@@ -1,0 +1,95 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: serif;
+    font-weight: 300;
+}
+
+img { max-width: 100%;
+
+}
+
+.basic-example {
+    display: flex;
+    background: #ccc;
+    padding: 3em;
+}
+
+p:target { background: red;
+
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    padding: 5em;
+    background-color: #333;
+
+
+}
+
+.portfolio__item{
+    background: white;
+
+}
+
+.portfolio__desc{
+    padding: 1em;
+}
+
+.portfolio__title{
+    font-size: 1.5em;
+    margin-top: 0;
+}
+.portfolio-lightbox{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.portfolio-lightbox:target {
+    display: flex;
+}
+
+.portfolio-lightbox__content{
+    width: 75%;
+    background: black;
+    padding: 1em;
+    position: relative;
+}
+.close{
+    position: absolute;
+    width: 2em;
+    height: 2em;
+    background: red;
+    border-radius: 50%;
+    top: -1em;
+    right: -1em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.close::after{
+    content: 'X';
+    color: white;
+    font-weight: 700;
+   
+    
+}
