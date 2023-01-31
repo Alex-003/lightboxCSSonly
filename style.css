@@ -33,7 +33,7 @@ p:target { background: red;
 
 .portfolio img {
     width: 100%;
-    height auto;
+    height: auto;
 }
 
 .portfolio__item{
